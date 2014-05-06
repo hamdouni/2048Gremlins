@@ -4,7 +4,7 @@ Merging 2048 and Gremlins.js = Let the gremlins do the job :-)
 
 Just for the fun, because I like Gabriele Cirulli work and I wanted to try the Marmelab lib gremlins.js, I mixed all those stuff.
 
-- The [Demo is here](http://github.hamdouni.com/2048Gremlins/) : Be carefull, it only works on Firefox ! Sorry webkit browser does not allow firing key events (or I still don't find how :-) )
+- The [Demo is here](http://github.hamdouni.com/2048Gremlins/) : Now works in Firefox and also in Google Chrome !
 - [Original 2048](https://github.com/gabrielecirulli/2048)
 - [Original Gremlins.js](https://github.com/marmelab/gremlins.js)
 
@@ -16,7 +16,7 @@ Just for the fun, because I like Gabriele Cirulli work and I wanted to try the M
 
 ## How to use it
 
-Open index.html in Firefox and see the gremlins play. 
+Open index.html and see the gremlins play. 
 
 ## How to build gremlins.min.js
 

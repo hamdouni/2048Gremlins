@@ -75,17 +75,16 @@ define(function(require) {
         function typerGremlin() {
             var documentWidth = Math.max(body.scrollWidth, body.offsetWidth, documentElement.scrollWidth, documentElement.offsetWidth, documentElement.clientWidth),
                 documentHeight = Math.max(body.scrollHeight, body.offsetHeight, documentElement.scrollHeight, documentElement.offsetHeight, documentElement.clientHeight),
-                keyboardEvent = document.createEvent("KeyboardEvent"),
-                initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent",
-                /*key = config.randomizer.natural({ max: 360}),*/
+                keyboardEvent = document.createEventObject ? document.createEventObject() : document.createEvent("Events");
                 key = 36+Math.floor((Math.random()*4)+1) ,
                 posX = config.randomizer.natural({ max: documentElement.clientWidth - 1 }),
                 posY = config.randomizer.natural({ max: documentElement.clientHeight - 1 }),
                 targetElement = document.elementFromPoint(posX, posY);
 
-            keyboardEvent[initMethod](config.randomizer.pick(config.eventTypes), true, true, window, false, false,  false,  false,  key, 0);
-
-            targetElement.dispatchEvent(keyboardEvent);
+                if(keyboardEvent.initEvent) keyboardEvent.initEvent("keydown", true, true);
+                keyboardEvent.keyCode = key;
+                keyboardEvent.which = key;
+                el.dispatchEvent ? el.dispatchEvent(keyboardEvent) : el.fireEvent("onkeydown", keyboardEvent); 
 
             if (typeof config.showAction === 'function') {
                 config.showAction(targetElement, posX, posY, key);

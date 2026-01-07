@@ -4,7 +4,7 @@ Merging 2048 and Gremlins.js = Let the gremlins do the job :-)
 
 Just for the fun, because I like Gabriele Cirulli work and I wanted to try the Marmelab lib gremlins.js, I mixed all those stuff.
 
-- The [Demo is here](http://github.hamdouni.com/2048Gremlins/) : Now works in Firefox and also in Google Chrome !
+- The [Demo is here](https://barim.us/2048Gremlins/) : Now works in Firefox and also in Google Chrome !
 - [Original 2048](https://github.com/gabrielecirulli/2048)
 - [Original Gremlins.js](https://github.com/marmelab/gremlins.js)
 
